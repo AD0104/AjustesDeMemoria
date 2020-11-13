@@ -3,10 +3,12 @@ package principal;
 import modelo.creadorProcesos;
 import modelo.lista;
 import modelo.proceso;
+import vista.Frame;
 
 public class NewMain {
     public static void main(String[] args) {
-        lista l = new lista();
+        new Frame();
+        /*lista l = new lista();
         creadorProcesos cp = new creadorProcesos();
         l.insertarParticion(50);
         l.insertarParticion(150);
@@ -75,5 +77,6 @@ public class NewMain {
         System.out.println("");
 //        l.imprimirLista();
         l.imprimirProcesos();    
+*/
     }    
 }

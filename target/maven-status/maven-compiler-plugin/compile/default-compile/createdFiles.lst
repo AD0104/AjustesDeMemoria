@@ -1,5 +1,6 @@
-personal/proyectoadministracionmemoria/NewMain.class
 modelo/proceso.class
+principal/NewMain.class
 modelo/lista.class
 modelo/nodo.class
+vista/Frame.class
 modelo/creadorProcesos.class
