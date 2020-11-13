@@ -2,5 +2,7 @@ modelo/proceso.class
 principal/NewMain.class
 modelo/lista.class
 modelo/nodo.class
-vista/Frame.class
 modelo/creadorProcesos.class
+vista/imagenFondo.class
+vista/Frame.class
+vista/Panel.class
