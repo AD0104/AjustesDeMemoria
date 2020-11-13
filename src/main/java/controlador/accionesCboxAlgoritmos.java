@@ -8,13 +8,14 @@ import vista.Panel;
 public class accionesCboxAlgoritmos implements ActionListener{
     Panel pnl;
     JComboBox cBoxAlgos;
+    public static String algoritmo;
     public accionesCboxAlgoritmos(Panel pnl){
         this.pnl = pnl;
     }
     @Override
     public void actionPerformed(ActionEvent ae) {
         cBoxAlgos = (JComboBox) ae.getSource();
-        String algoritmo = cBoxAlgos.getSelectedItem().toString();
+        algoritmo = cBoxAlgos.getSelectedItem().toString();
         if(algoritmo.equals("Primer Ajuste")){
             System.out.println("Seleccionado: "+algoritmo);
         }else if(algoritmo.equals("Mejor Ajuste")){

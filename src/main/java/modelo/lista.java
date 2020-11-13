@@ -27,13 +27,13 @@ public class lista{
         return posterior;
     }
     
-    public boolean insertarParticion(int partitionSize) {
+    public boolean insertarParticion(int partitionSize, int x, int y) {
         nodo nuevo;
         nodo resp = buscarParticion(partitionSize);
         if (resp != null){//La particion se encuentra registrada.
             return false;
         }else{
-            nuevo = new nodo(partitionSize, null);
+            nuevo = new nodo(partitionSize, null,0,0);
             if (anterior == null) {//La particion debe ser la primera.
                 nuevo.setSig(raiz);
                 raiz = nuevo;

@@ -4,7 +4,9 @@ principal/NewMain.class
 controlador/accionesCboxAlgoritmos.class
 modelo/lista.class
 modelo/nodo.class
+controlador/dibujarProcesoNuevo.class
 modelo/creadorProcesos.class
 vista/imagenFondo.class
+controlador/hiloControlador.class
 vista/Frame.class
 vista/Panel.class

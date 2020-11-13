@@ -1,6 +1,12 @@
 /home/adrian/NetBeansProjects/ProyectoAdministracionMemoria/src/main/java/modelo/lista.java
+/home/adrian/NetBeansProjects/ProyectoAdministracionMemoria/src/main/java/controlador/accionesCboxAlgoritmos.java
+/home/adrian/NetBeansProjects/ProyectoAdministracionMemoria/src/main/java/vista/imagenFondo.java
+/home/adrian/NetBeansProjects/ProyectoAdministracionMemoria/src/main/java/controlador/hiloControlador.java
+/home/adrian/NetBeansProjects/ProyectoAdministracionMemoria/src/main/java/vista/Panel.java
 /home/adrian/NetBeansProjects/ProyectoAdministracionMemoria/src/main/java/modelo/nodo.java
+/home/adrian/NetBeansProjects/ProyectoAdministracionMemoria/src/main/java/controlador/dibujarProcesoNuevo.java
 /home/adrian/NetBeansProjects/ProyectoAdministracionMemoria/src/main/java/principal/NewMain.java
 /home/adrian/NetBeansProjects/ProyectoAdministracionMemoria/src/main/java/vista/Frame.java
 /home/adrian/NetBeansProjects/ProyectoAdministracionMemoria/src/main/java/modelo/creadorProcesos.java
 /home/adrian/NetBeansProjects/ProyectoAdministracionMemoria/src/main/java/modelo/proceso.java
+/home/adrian/NetBeansProjects/ProyectoAdministracionMemoria/src/main/java/controlador/accionesBtn.java

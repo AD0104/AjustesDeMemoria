@@ -16,7 +16,7 @@ public class Frame {
     accionesCboxAlgoritmos acAl;
     accionesBtn acbtn;
     JComboBox algoritmos;
-    JButton clean;
+    JButton start;
     String[] algos = {"Elegir...","Primer Ajuste","Mejor Ajuste","Peor Ajuste"};
     public static JFrame frame;
     public Frame(){
@@ -41,18 +41,18 @@ public class Frame {
         pnl_opciones.setBackground(Color.red);
         
         acAl = new accionesCboxAlgoritmos(pnl_memoria);
-        acbtn = new accionesBtn(pnl_memoria);
+        acbtn = new accionesBtn(frame,pnl_memoria,null);
         
         algoritmos = new JComboBox(algos);
         algoritmos.setSelectedIndex(0);
         algoritmos.setEditable(false);
         algoritmos.addActionListener(acAl);
         
-        clean = new JButton("Limpiar pantalla");
-        clean.addActionListener(acbtn);
+        start = new JButton("Iniciar");
+        start.addActionListener(acbtn);
         
         pnl_opciones.add(algoritmos);
-        pnl_opciones.add(clean);
+        pnl_opciones.add(start);
         
         frame.add(pnl_opciones, BorderLayout.WEST);
     }
