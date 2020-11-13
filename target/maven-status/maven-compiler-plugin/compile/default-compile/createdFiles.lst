@@ -1,5 +1,7 @@
+controlador/accionesBtn.class
 modelo/proceso.class
 principal/NewMain.class
+controlador/accionesCboxAlgoritmos.class
 modelo/lista.class
 modelo/nodo.class
 modelo/creadorProcesos.class

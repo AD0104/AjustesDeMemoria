@@ -1,14 +1,23 @@
 package vista;
 
+import controlador.accionesBtn;
+import controlador.accionesCboxAlgoritmos;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 public class Frame {
     public static Panel pnl_memoria;
-    JPanel pnl_opciones;
+    public static JPanel pnl_opciones;
+    accionesCboxAlgoritmos acAl;
+    accionesBtn acbtn;
+    JComboBox algoritmos;
+    JButton clean;
+    String[] algos = {"Elegir...","Primer Ajuste","Mejor Ajuste","Peor Ajuste"};
     public static JFrame frame;
     public Frame(){
         frame = new JFrame("Proyecto de memoria");
@@ -31,6 +40,19 @@ public class Frame {
         pnl_opciones.setPreferredSize(new Dimension(250,750));
         pnl_opciones.setBackground(Color.red);
         
+        acAl = new accionesCboxAlgoritmos(pnl_memoria);
+        acbtn = new accionesBtn(pnl_memoria);
+        
+        algoritmos = new JComboBox(algos);
+        algoritmos.setSelectedIndex(0);
+        algoritmos.setEditable(false);
+        algoritmos.addActionListener(acAl);
+        
+        clean = new JButton("Limpiar pantalla");
+        clean.addActionListener(acbtn);
+        
+        pnl_opciones.add(algoritmos);
+        pnl_opciones.add(clean);
         
         frame.add(pnl_opciones, BorderLayout.WEST);
     }
