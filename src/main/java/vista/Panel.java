@@ -1,5 +1,7 @@
 package vista;
 
+import java.awt.Color;
+import java.awt.Graphics;
 import java.io.File;
 import java.io.IOException;
 import javax.imageio.ImageIO;
@@ -14,5 +16,12 @@ public class Panel extends javax.swing.JPanel{
         }catch(IOException ioe){
             JOptionPane.showMessageDialog(this, ioe.getMessage());
         }
+    }
+//    @Override
+    public void paintComponent(Graphics g, Color color, int x,int y){
+        super.paintComponent(g);
+        g.setColor(color);
+        g.fillOval(x, y, 45,45);
+        this.repaint();
     }
 }
