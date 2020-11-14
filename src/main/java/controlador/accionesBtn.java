@@ -1,13 +1,10 @@
 package controlador;
 
-//import java.awt.BorderLayout;
-//import java.awt.Color;
-//import java.awt.Graphics;
-import java.awt.Color;
+import static controlador.accionesCboxAlgoritmos.algoritmo;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JFrame;
-//import javax.swing.JPanel;
+import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
 import modelo.lista;
 import vista.Panel;
@@ -36,36 +33,35 @@ public class accionesBtn implements ActionListener{
         l.insertarParticion(1500, 360, 50);
         l.insertarParticion(1800, 410, 50);
         lSize = 7;
-        l.imprimirLista();
     }
     
     @Override
     public void actionPerformed(ActionEvent ae) {
-
-/*      
-        if(hpa == null){
-            hpa = new hiloPeorAjuste(l, pnl, lSize);
-            hpa.start();
+        System.out.println("Nuevo algoritmo: "+algoritmo);
+        System.out.println("Procesos en lista: ");
+        l.imprimirProcesos();
+        System.out.println("");
+        if(algoritmo == null){
+            JOptionPane.showMessageDialog(frame, "No hay ajuste seleccionado");
+        }else if(algoritmo.equals("Primer Ajuste")){
+            if(hpra == null){
+                l.limpiarProcesos();
+                hpra = new hiloPrimerAjuste(l, pnl, lSize);
+                hpra.start();
+            }
+        }else if(algoritmo.equals("Mejor Ajuste")){
+            if(hma == null){
+                l.limpiarProcesos();
+                hma = new hiloMejorAjuste(l, pnl, lSize);
+                hma.start();
+            }
+        }else if(algoritmo.equals("Peor Ajuste")){
+            if(hpa == null){
+                l.limpiarProcesos();
+                hpa = new hiloPeorAjuste(l, pnl, lSize);
+                hpa.start();
+            }
         }
-        if(hma == null){
-            hma = new hiloMejorAjuste(l, pnl, lSize);
-            hma.start();
-        }
-        if(hpra == null){
-            hpra = new hiloPrimerAjuste(l, pnl, lSize);
-            hpra.start();
-        }
-        frame.remove(pnl);
-        pnl = new Panel((JPanel)frame.getContentPane());
-        frame.add(pnl,BorderLayout.CENTER);
-        
-        System.out.println("Reloading...");
-        
-        reloadFrame();
-        
-        new dibujarProcesoNuevo().dibujar(pnl.getGraphics(), 0, 0);
-        reloadPnl();
-*/
     }
     public void reloadFrame(){
         SwingUtilities.updateComponentTreeUI(frame);

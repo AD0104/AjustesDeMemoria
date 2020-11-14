@@ -119,6 +119,14 @@ public class lista{
         }
     }
 
+    public void limpiarProcesos(){
+        nodo aux=raiz;
+        do{
+            aux.setProcess(null);
+            aux = aux.getSig();
+        }while(aux != null);
+    }
+    
     public void imprimirLista() {
         nodo aux = raiz;
         do {

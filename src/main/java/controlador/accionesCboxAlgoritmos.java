@@ -16,14 +16,5 @@ public class accionesCboxAlgoritmos implements ActionListener{
     public void actionPerformed(ActionEvent ae) {
         cBoxAlgos = (JComboBox) ae.getSource();
         algoritmo = cBoxAlgos.getSelectedItem().toString();
-        if(algoritmo.equals("Primer Ajuste")){
-            System.out.println("Seleccionado: "+algoritmo);
-        }else if(algoritmo.equals("Mejor Ajuste")){
-            System.out.println("Seleccionado: "+algoritmo);
-        }else if(algoritmo.equals("Peor Ajuste")){
-            System.out.println("Seleccionado: "+algoritmo);
-        }
     }
-    
-    
 }
