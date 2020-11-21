@@ -31,7 +31,6 @@ public class Frame {
         
         initComps();
         
-        System.out.println("Pnl graphics: "+pnl_memoria.getGraphics());
         
         frame.setVisible(true);
     }

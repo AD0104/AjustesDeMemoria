@@ -1,5 +1,7 @@
 package modelo;
 
+import java.util.ArrayList;
+
 public class lista{
     nodo raiz;
     nodo anterior, posterior;
@@ -126,7 +128,16 @@ public class lista{
             aux = aux.getSig();
         }while(aux != null);
     }
-    
+    public ArrayList obtenerCoordenadas(){
+        ArrayList<int[]> coordenadas = new ArrayList<int[]>();
+        nodo aux = raiz;
+        do{
+//            coordenadas.add(aux.getProcess().getX());
+            aux = aux.getSig();
+        }while(aux.getSig() != null);
+        
+        return null;
+    }
     public void imprimirLista() {
         nodo aux = raiz;
         do {
